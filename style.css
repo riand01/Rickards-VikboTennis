@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style the body */ 
+body {
+    height: 100vh;
+    background: url(img/pic6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Style the top navigation bar */
+li, a , button {
+    font-weight: bold;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 10%;
+    height: 12%;
+    background-color: #24252a;
+}
+
+/* While hover over logo a hand replaces mouse pointer */
+.logo {
+    height: 80px;
+    cursor: pointer;
+    margin-right: auto;
+}
+  
+.nav_links {
+    list-style: none;
+}
+
+/* Target each individual element in the nav */
+.nav_links li {
+    display: inline-block;  /*Makes the links be in a row instead of a column */
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #0088a9
+}
+
+button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0,136,169,0.8);
+}
+
+  /* Footer */
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 10%;
+    height: 12%;
+    position: fixed;
+    height: 5%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #24252a;
+    color: #edf0f1;
+    text-align: center;
+    
+    
+ }
+  
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .row, .navbar {   
+      flex-direction: column;
+    }
+    .logo {
+        display: none;
+    }
+  }
