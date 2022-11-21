@@ -20,13 +20,56 @@
             </ul>
         </nav>
         <a class="cta" href="#"><button>Bli Medlem</button></a>
-        <a class="cta" href="#"><button>Logga in</button></a>
+        <a class="cta" href="#"><button onclick="document.getElementById('id01').style.display='block'">Logga in</button></a>
     </header>
 
-    <Head>
+    <main>
         <img class="logo" src="logo/logo.png" alt="logo">
-    </Head>
+
+
+        <!-- The Modal -->
+        <div id="id01" class="modal">
+      
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="logo/uicon.png" alt="Avatar" class="avatar">
+              </div>
+          
+              <div class="container">
+                <label for="uname"><b>Användarnamn</b></label>
+                <input type="text" placeholder="Skriv in användarnamn" name="uname" required>
+          
+                <label for="psw"><b>Lösenord</b></label>
+                <input type="password" placeholder="Skriv in lösenord" name="psw" required>
+                  
+                <button type="submit">Logga in</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Kom ihåg mig
+                </label>
+              </div>
+          
+              <div class="container" style="background-color:#24252a;">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Avbryt</button>
+                <span class="psw">Glömt <a href="#">lösenord?</a></span>
+              </div>
+            </form>
+        </div>
+          
+        <script>
+          // Get the modal
+          var modal = document.getElementById('id01');
+          
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }
+        </script>
+    </main>
   
+    
 
   
 
