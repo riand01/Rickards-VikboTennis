@@ -19,15 +19,15 @@
                 <li><a href="#">Boka Bastu</a></li>
             </ul>
         </nav>
-        <a class="cta" href="#"><button>Bli Medlem</button></a>
+        <a class="cta" href="#"><button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button></a>
         <a class="cta" href="#"><button onclick="document.getElementById('id01').style.display='block'">Logga in</button></a>
     </header>
 
     <main>
-        <img class="logo" src="logo/logo.png" alt="logo">
+        <!-- <img class="logo" src="logo/logo.png" alt="logo"> -->
 
 
-        <!-- The Modal -->
+        <!-- The LoginForm -->
         <div id="id01" class="modal">
       
             <form class="modal-content animate" action="/action_page.php" method="post">
@@ -67,6 +67,44 @@
               }
           }
         </script>
+
+        <!-- The SignupForm -->
+        <div id="id02" class="modal">
+      
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <h2>Ny Medlem</h2>
+              </div>
+          
+              <div class="container">
+                <label for="uname"><b>Användarnamn</b></label>
+                <input type="text" placeholder="Skriv in användarnamn" name="uname" required>
+
+                <label for="uname"><b>Användarnamn</b></label>
+                <input type="text" placeholder="Skriv in användarnamn" name="uname" required>
+
+                <label for="uname"><b>Användarnamn</b></label>
+                <input type="text" placeholder="Skriv in användarnamn" name="uname" required>
+          
+                <label for="psw"><b>Lösenord</b></label>
+                <input type="password" placeholder="Skriv in lösenord" name="psw" required>
+                  
+                <button type="submit">Logga in</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Kom ihåg mig
+                </label>
+              </div>
+          
+              <div class="container" style="background-color:#24252a;">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Avbryt</button>
+                <span class="psw">Glömt <a href="#">lösenord?</a></span>
+              </div>
+            </form>
+        </div>
+          
+       
+
     </main>
   
     
