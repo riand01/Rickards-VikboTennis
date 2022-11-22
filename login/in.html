@@ -9,25 +9,25 @@
 </head>
 <body>
   
-   
-
   <!-- Navigation Bar -->
-    <header class="head">
-        <img class="logo" src="logo/logo.png" alt="logo">
+    <header>
+        <img class="logo" src="/logo/logo.png" alt="logo">
         <nav>
             <ul class="nav_links">
-                <li><a href="index.html">Hem</a></li>
+                <li><a href="/index.html">Hem</a></li>
                 <li><a href="#">Boka Bana</a></li>
                 <li><a href="#">Hyr Material</a></li>
                 <li><a href="#">Boka Bastu</a></li>
             </ul>
         </nav>
-        <a class="cta" href="signup/sign.html"><button>Bli medlem</button></a>
+        <a class="cta" href="signup/sign.html"><button>Sign Up</button></a>
         <a class="cta" href="#"><button onclick="document.getElementById('id01').style.display='block'">Logga in</button></a>
     </header>
 
-    <main class="main">
-        
+    <main>
+        <!-- <img class="logo" src="logo/logo.png" alt="logo"> -->
+
+
         <!-- The LoginForm -->
         <div id="id01" class="modal">
       
@@ -44,19 +44,21 @@
                 <label for="psw"><b>Lösenord</b></label>
                 <input type="password" placeholder="Skriv in lösenord" name="psw" required>
                   
-                <button class="loginbtn" type="submit">Logga in</button>
+                <button type="submit">Logga in</button>
                 <label>
                   <input type="checkbox" checked="checked" name="remember"> Kom ihåg mig
                 </label>
               </div>
           
-              <div class="container">
+              <div class="container" style="background-color:#24252a;">
                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Avbryt</button>
                 <span class="psw">Glömt <a href="#">lösenord?</a></span>
               </div>
             </form>
         </div>
 
+      
+    
     </main>
   
   <!-- Footer -->
@@ -71,6 +73,6 @@
   </div>
 
 
-<script src="script.js"></script>
+<script src="/script.js"></script>
 </body>
 </html>
