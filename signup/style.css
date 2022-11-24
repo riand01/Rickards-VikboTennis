@@ -64,18 +64,32 @@ header {
     color: rgba(121, 255, 4, 0.781);
 }
 
-.cta button {
-    margin-left: 20px;
-    padding: 9px 25px;
-    background-color: rgba(121, 255, 4, 0.781);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+.ctalog button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: rgba(121, 255, 4, 0.781);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
 
-.cta button:hover {
-    background-color: rgba(0, 103, 3, 0.8);
+.ctasign button {
+margin-left: 20px;
+padding: 9px 25px;
+background-color: rgb(255, 115, 0);
+border: none;
+border-radius: 50px;
+cursor: pointer;
+transition: all 0.3s ease 0s;
+}
+
+.ctalog button:hover {
+  background-color: rgba(0, 103, 3, 0.8);
+}
+
+.ctasign button:hover {
+background-color: rgb(164, 74, 0);
 }
 
 .modal label {
@@ -340,13 +354,13 @@ input[type=checkbox] {
     transition: background-color 1s ease-out;
   }
 
-  #checkbox {
+  /* #checkbox {
     display: block;
     width: unset;
     margin: 0 0.5em 0 0;
     vertical-align:middle;
     float: left;
-  }
+  } */
 
   /* LARGE SCREENS*/
   @media(min-width:700px){
