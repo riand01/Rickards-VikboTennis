@@ -9,25 +9,26 @@
 </head>
 <body>
   
+   
+
   <!-- Navigation Bar -->
-    <header>
+    <header class="head">
         <img class="logo" src="logo/logo.png" alt="logo">
         <nav>
             <ul class="nav_links">
+                <li><a href="index.html">Hem</a></li>
                 <li><a href="#">Boka Bana</a></li>
                 <li><a href="#">Hyr Material</a></li>
-                <li><a href="#">Boka Bastu</a></li>
+                <li><a href="sauna/sauna.html">Boka Bastu</a></li>
             </ul>
         </nav>
-        <a class="cta" href="#"><button>Bli Medlem</button></a>
-        <a class="cta" href="#"><button onclick="document.getElementById('id01').style.display='block'">Logga in</button></a>
+        <a class="ctasign" href="signup/sign.html"><button>Bli medlem</button></a>
+        <a class="ctalog" href="#"><button onclick="document.getElementById('id01').style.display='block'">Logga in</button></a>
     </header>
 
-    <main>
-        <img class="logo" src="logo/logo.png" alt="logo">
-
-
-        <!-- The Modal -->
+    <main class="main">
+        
+        <!-- The LoginForm -->
         <div id="id01" class="modal">
       
             <form class="modal-content animate" action="/action_page.php" method="post">
@@ -43,38 +44,21 @@
                 <label for="psw"><b>Lösenord</b></label>
                 <input type="password" placeholder="Skriv in lösenord" name="psw" required>
                   
-                <button type="submit">Logga in</button>
+                <button class="loginbtn" type="submit">Logga in</button>
                 <label>
                   <input type="checkbox" checked="checked" name="remember"> Kom ihåg mig
                 </label>
               </div>
           
-              <div class="container" style="background-color:#24252a;">
+              <div class="container">
                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Avbryt</button>
                 <span class="psw">Glömt <a href="#">lösenord?</a></span>
               </div>
             </form>
         </div>
-          
-        <script>
-          // Get the modal
-          var modal = document.getElementById('id01');
-          
-          // When the user clicks anywhere outside of the modal, close it
-          window.onclick = function(event) {
-              if (event.target == modal) {
-                  modal.style.display = "none";
-              }
-          }
-        </script>
+
     </main>
   
-    
-
-  
-
-  
-
   <!-- Footer -->
   <div class="footer">
     <nav>
@@ -86,5 +70,7 @@
         </nav>
   </div>
 
+
+<script src="script.js"></script>
 </body>
 </html>
