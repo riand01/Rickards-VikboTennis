@@ -366,9 +366,13 @@ span.psw {
   top:0; right: 20px;
   font-size: 30px;
   font-weight: bolder;
-  color: rgb(255, 46, 46);
+  color: #fff;
   cursor: pointer;
   z-index: 100;
+}
+
+.contact a:hover {
+  color: rgb(255, 61, 61);
 }
 
 .contact form{
