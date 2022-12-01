@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" integrity="sha512-Q5FghnpxjBPgZOw6Qh2ZQ8a9fXdMeAI/PndxnLx9eCbj+Fm973p23OuRv2sx7FZyVD9mZaBs7ty1UuGxRqDzOw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"
+        integrity="sha512-Q5FghnpxjBPgZOw6Qh2ZQ8a9fXdMeAI/PndxnLx9eCbj+Fm973p23OuRv2sx7FZyVD9mZaBs7ty1UuGxRqDzOw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-  
-  <!-- Navigation Bar -->
+
+    <!-- Navigation Bar -->
     <header class="head">
         <img class="logo" src="/logo/logo.png" alt="logo">
         <nav>
@@ -23,7 +28,8 @@
             </ul>
         </nav>
         <a class="ctasign" href="/signup/sign.html"><button>Bli medlem</button></a>
-        <a class="ctalog" href="#"><button onclick="document.getElementById('id01').style.display='block'">Logga in</button></a>
+        <a class="ctalog" href="#"><button onclick="document.getElementById('id01').style.display='block'">Logga
+                in</button></a>
     </header>
 
     <main>
@@ -32,30 +38,32 @@
 
         <!-- The LoginForm -->
         <div id="id01" class="modal">
-      
+
             <form class="modal-content animate" action="/action_page.php" method="post">
-              <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="/logo/uicon.png" alt="Avatar" class="avatar">
-              </div>
-          
-              <div class="container">
-                <label for="uname"><b>Användarnamn</b></label>
-                <input type="text" placeholder="Skriv in användarnamn" name="uname" required>
-          
-                <label for="psw"><b>Lösenord</b></label>
-                <input type="password" placeholder="Skriv in lösenord" name="psw" required>
-                  
-                <button class="loginbtn" type="submit">Logga in</button>
-                <label>
-                  <input type="checkbox" checked="checked" name="remember"> Kom ihåg mig
-                </label>
-              </div>
-          
-              <div class="container">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Avbryt</button>
-                <span class="psw">Glömt <a href="#">lösenord?</a></span>
-              </div>
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <img src="/logo/uicon.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label for="uname"><b>Användarnamn</b></label>
+                    <input type="text" placeholder="Skriv in användarnamn" name="uname" required>
+
+                    <label for="psw"><b>Lösenord</b></label>
+                    <input type="password" placeholder="Skriv in lösenord" name="psw" required>
+
+                    <button class="loginbtn" type="submit">Logga in</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Kom ihåg mig
+                    </label>
+                </div>
+
+                <div class="container">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">Avbryt</button>
+                    <span class="psw">Glömt <a href="#">lösenord?</a></span>
+                </div>
             </form>
         </div>
 
@@ -112,46 +120,48 @@
                         </p>
                         <p>
                             <label for="gender1" style="display:block; float:left;">
-                              <input type="radio" id="gender" name="gender" value="gender" style="width: unset;
+                                <input type="radio" id="gender" name="gender" value="gender" style="width: unset;
                               margin: 0 0.5em 0 0; width: 25px; height: 25px;
-                              vertical-align: middle;" >Man
+                              vertical-align: middle;">Man
                         </p>
                         <p>
                             <label for="gender2" style="display:block; float: left;">
                                 <input type="radio" id="gender" name="gender" value="gender" style="width: unset;
                                 margin: 0 0.5em 0 0; width: 25px; height: 25px;
-                                vertical-align: middle;" >Kvinna
+                                vertical-align: middle;">Kvinna
                         </p>
                         <p>
                             <label for="gender3" style="display:block; float: left;">
                                 <input type="radio" id="gender" name="gender" value="gender" style="width: unset;
                                 margin: 0 0.5em 0 0; width: 25px; height: 25px;
-                                vertical-align: middle;" >Annat
+                                vertical-align: middle;">Annat
                         </p>
-                        
+
                         <p class="full">
                             <button>Bekräfta</button>
                         </p>
                     </form>
                 </div>
-        </div>
-          
-       
+            </div>
+
+
 
     </main>
-  
-  <!-- Footer -->
-  <div class="footer">
-    <nav>
+
+    <!-- Footer -->
+    <div class="footer">
+        <nav>
             <ul class="nav_links">
-                <li><a href="#">Om Oss</a></li>
-                <li><a href="#">Kontakt</a></li>
-                <li><a href="#">Användarvillkor</a></li>
+                <li><a href="/contact/contact.html">Kontakt</a></li>
+                <li><a href="/about/about.html">Om oss</a></li>
+                <li><a href="/calender/calender.html">Kalender</a></li>
+                <li><a href="/openhrs/openhrs.html">Öppettider</a></li>
             </ul>
         </nav>
-  </div>
+    </div>
 
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
