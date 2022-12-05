@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/logo/logoico.ico">
+  <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
@@ -43,22 +44,31 @@
         </div>
 
         <div class="container">
-          <label for="uname"><b>Användarnamn</b></label>
-          <input type="text" placeholder="Skriv in användarnamn" name="uname" required>
-
-          <label for="psw"><b>Lösenord</b></label>
-          <input type="password" placeholder="Skriv in lösenord" name="psw" required>
-
-          <button class="loginbtn" type="submit">Logga in</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Kom ihåg mig
-          </label>
+          <p>
+            <label></label><span id="email-error"></span><br>
+            <input type="email" id="contact-email" onkeyup="validateEmail()" placeholder="Användarnamn" name="email">
+          </p>
+          <p>
+            <label></label><span id="psw-error"></span><br>
+            <input type="password" id="contact-psw" onkeyup="validatePsw()" placeholder="Lösenord" name="psw" required>
+          </p>
+          <p>
+            <span id="submit-error"></span><br><br>
+            <button id="loginbtn" onclick="return validateForm()">Bekräfta</button><br><br>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Kom ihåg mig
+            </label>
+          </p>
         </div>
 
         <div class="container">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'"
+          <p>
+            <button type="button" onclick="document.getElementById('id01').style.display='none'"
             class="cancelbtn">Avbryt</button>
-          <span class="psw">Glömt <a href="#">lösenord?</a></span>
+          </p><br>
+          <p>Glömt <a href="#">lösenord?</a></p>
         </div>
       </form>
     </div>
@@ -77,8 +87,8 @@
     </nav>
   </div>
 
-
-  <script src="script.js"></script>
+<script src="signin.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>

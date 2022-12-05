@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"
         integrity="sha512-Q5FghnpxjBPgZOw6Qh2ZQ8a9fXdMeAI/PndxnLx9eCbj+Fm973p23OuRv2sx7FZyVD9mZaBs7ty1UuGxRqDzOw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -47,22 +48,33 @@
                 </div>
 
                 <div class="container">
-                    <label for="uname"><b>Användarnamn</b></label>
-                    <input type="text" placeholder="Skriv in användarnamn" name="uname" required>
-
-                    <label for="psw"><b>Lösenord</b></label>
-                    <input type="password" placeholder="Skriv in lösenord" name="psw" required>
-
-                    <button class="loginbtn" type="submit">Logga in</button>
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"> Kom ihåg mig
-                    </label>
+                    <p>
+                        <label></label><span id="email-error"></span><br>
+                        <input type="email" id="contact-email" onkeyup="validateEmail()" placeholder="Användarnamn"
+                            name="email">
+                    </p>
+                    <p>
+                        <label></label><span id="psw-error"></span><br>
+                        <input type="password" id="contact-psw" onkeyup="validatePsw()" placeholder="Lösenord"
+                            name="psw" required>
+                    </p>
+                    <p>
+                        <span id="submit-error"></span><br><br>
+                        <button id="loginbtn" onclick="return validateForm()">Bekräfta</button><br><br>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Kom ihåg mig
+                        </label>
+                    </p>
                 </div>
 
                 <div class="container">
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                        class="cancelbtn">Avbryt</button>
-                    <span class="psw">Glömt <a href="#">lösenord?</a></span>
+                    <p>
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Avbryt</button>
+                    </p><br>
+                    <p>Glömt <a href="#">lösenord?</a></p>
                 </div>
             </form>
         </div>
@@ -72,73 +84,79 @@
             <h1 class="brand"><span>Bli Medlem</span></h1>
             <div class="wrapper animated bounceInLeft">
                 <div class="company-info">
-                    <h3>Om du vill bli medlem</h3>
-                    <ul>
-                        <li>Måste vi ha</li>
-                        <li>följande information</li>
-                        <li>om dig...........</li>
-                    </ul>
+                    <div>
+                        <img id="pic3" src="/logo/newmemberwhite.png" alt="logo new member">
+                    </div>
                 </div>
                 <div class="contact">
                     <a href="/index.html">&times;</a>
-                    <form action="">
+                    <form name="myform" onsubmit="return validateForm()" method="post">
                         <p>
-                            <label>Namn</label>
-                            <input type="text" placeholder="Fyll i ditt namn" name="name">
+                            <label></label><span id="name-error"></span><br>
+                            <input type="text" id="contact-fname" onkeyup="validateFname()" placeholder="Förnamn"
+                                name="fname">
+
                         </p>
                         <p>
-                            <label>Efternamn</label>
-                            <input type="text" placeholder="Fyll i ditt efternamn" name="comapany">
+                            <label></label><span id="lname-error"></span><br>
+                            <input type="text" id="contact-lname" onkeyup="validateLname()" placeholder="Efternamn"
+                                name="lname">
                         </p>
                         <p>
-                            <label>Email</label>
-                            <input type="text" placeholder="Fyll i din mailaddress" name="email">
+                            <label></label><span id="email-error"></span><br>
+                            <input type="email" id="contact-email" onkeyup="validateEmail()" placeholder="Email"
+                                name="email">
+
                         </p>
                         <p>
-                            <label>Telefonnummer</label>
-                            <input type="text" placeholder="07XX XXX XXX" name="phone">
+                            <label></label><span id="phone-error"></span><br>
+                            <input type="tel" id="contact-phone" onkeyup="validatePhone()"
+                                placeholder="Mobilnr 07xx xxx xxx">
+
                         </p>
                         <p>
-                            <label>Personnummer</label>
-                            <input type="text" placeholder="XXXXXX-XXXX" name="phone">
+                            <label></label><span id="ssnr-error"></span><br>
+                            <input type="text" id="contact-ssnr" onkeyup="validateSSnr()"
+                                placeholder="Persnr ååmmddxxxx" name="ssnr">
                         </p>
                         <p>
-                            <label>Adress</label>
-                            <input type="text" placeholder="Fyll i din adress" name="phone">
+                            <label></label><span id="adress-error"></span><br>
+                            <input type="text" id="contact-adress" onkeyup="validateAdress()" placeholder="Adress"
+                                name="adress">
                         </p>
                         <p>
-                            <label>Postnummer</label>
-                            <input type="text" placeholder="XXX XX" name="phone">
+                            <label></label><span id="post-error"></span><br>
+                            <input type="text" id="contact-post" onkeyup="validatePost()" placeholder="Postnr xxxxx"
+                                name="postnr">
                         </p>
                         <p>
-                            <label>Stad</label>
-                            <input type="text" placeholder="Norrköping" name="phone">
+                            <label></label><span id="city-error"></span><br>
+                            <input type="text" id="contact-city" onkeyup="validateCity()" placeholder="Stad"
+                                name="city">
                         </p>
                         <p>
-                            <label>C/o</label>
-                            <input type="text" placeholder="Alternativ adress" name="phone">
+                            <label></label><span id="co-error"></span><br>
+                            <input type="text" id="sign" placeholder="C/o" name="altadress">
                         </p>
                         <p>
-                            <label for="gender1" style="display:block; float:left;">
-                                <input type="radio" id="gender" name="gender" value="gender" style="width: unset;
+                            <label for="gender1" style="display:block; float:left;"><span id="radio-error"></span><br>
+                                <input type="radio" id="radio-post" onkeyup="validateRadio()" name="gender"
+                                    value="gender" style="width: unset;
                               margin: 0 0.5em 0 0; width: 25px; height: 25px;
                               vertical-align: middle;">Man
                         </p>
                         <p>
-                            <label for="gender2" style="display:block; float: left;">
-                                <input type="radio" id="gender" name="gender" value="gender" style="width: unset;
+                            <label for="gender2" style="display:block; float: left;"><span id="radio-error"></span><br>
+                                <input type="radio" id="radio-post" onkeyup="validateRadio()" name="gender"
+                                    value="gender" style="width: unset;
                                 margin: 0 0.5em 0 0; width: 25px; height: 25px;
                                 vertical-align: middle;">Kvinna
                         </p>
-                        <p>
-                            <label for="gender3" style="display:block; float: left;">
-                                <input type="radio" id="gender" name="gender" value="gender" style="width: unset;
-                                margin: 0 0.5em 0 0; width: 25px; height: 25px;
-                                vertical-align: middle;">Annat
-                        </p>
 
                         <p class="full">
-                            <button>Bekräfta</button>
+                            <span id="submit-error"></span><br><br>
+                            <button onclick="return validateForm()">Bekräfta</button>
+
                         </p>
                     </form>
                 </div>
@@ -159,8 +177,8 @@
             </ul>
         </nav>
     </div>
-
-
+    <script src="/signin.js"></script>
+    <script src="sign.js"></script>
     <script src="script.js"></script>
 </body>
 

@@ -110,7 +110,7 @@ header {
 /* ------------------------------------Here starts the head -----------------------------------------------*/
 
 .main {
-    min-height: 76%;
+    min-height: 83%;
     display: flex;
     background-color: #24252a;
     flex-direction: row;
@@ -118,7 +118,7 @@ header {
     justify-content: center;
 }
 
-.textbox{
+.textbox {
     height: 400px;
     width: 400px;
     /* border: 1px solid #fff; */
@@ -133,15 +133,14 @@ p {
     text-indent: 50px;
     text-align: justify;
     letter-spacing: 3px;
-  }
-  
-     /*---------------------------------------- Footer----------------------------------------------------------- */
+}
+
+/*---------------------------------------- Footer----------------------------------------------------------- */
 .footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 5px 10%;
-    height: 12%;
     position: fixed;
     height: 5%;
     left: 0;

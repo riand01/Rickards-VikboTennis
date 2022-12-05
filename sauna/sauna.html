@@ -1,134 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" integrity="sha512-Q5FghnpxjBPgZOw6Qh2ZQ8a9fXdMeAI/PndxnLx9eCbj+Fm973p23OuRv2sx7FZyVD9mZaBs7ty1UuGxRqDzOw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"
+    integrity="sha512-Q5FghnpxjBPgZOw6Qh2ZQ8a9fXdMeAI/PndxnLx9eCbj+Fm973p23OuRv2sx7FZyVD9mZaBs7ty1UuGxRqDzOw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
 </head>
+
 <body>
-  
+
   <!-- Navigation Bar -->
   <header class="head">
-      <img class="logo" src="/logo/logo.png" alt="logo">
-      <nav>
-          <ul class="nav_links">
-              <li><a href="/index.html">Hem</a></li>
-              <li><a href="/track/trackbooking.html">Boka Bana</a></li>
-              <li><a href="/rent/rentmat.html">Hyr Material</a></li>
-              <li><a href="/sauna/sauna.html">Boka Bastu</a></li>
-          </ul>
-      </nav>
-      <a class="ctasign" href="/signup/sign.html"><button>Bli medlem</button></a>
-      <a class="ctalog" href="#"><button onclick="document.getElementById('id01').style.display='block'">Logga in</button></a>
+    <img class="logo" src="/logo/logo.png" alt="logo">
+    <nav>
+      <ul class="nav_links">
+        <li><a href="/index.html">Hem</a></li>
+        <li><a href="/track/trackbooking.html">Boka Bana</a></li>
+        <li><a href="/rent/rentmat.html">Hyr Material</a></li>
+        <li><a href="/sauna/sauna.html">Boka Bastu</a></li>
+      </ul>
+    </nav>
+    <a class="ctasign" href="/signup/sign.html"><button>Bli medlem</button></a>
+    <a class="ctalog" href="#"><button onclick="document.getElementById('id01').style.display='block'">Logga
+        in</button></a>
   </header>
 
   <main>
-    
-      <!-- The LoginForm -->
-      <div id="id01" class="modal">
-    
-        <form class="modal-content animate" action="/action_page.php" method="post">
-          <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="/logo/uicon.png" alt="Avatar" class="avatar">
-          </div>
-      
-          <div class="container">
-            <label for="uname"><b>Användarnamn</b></label>
-            <input type="text" placeholder="Skriv in användarnamn" name="uname" required>
-      
-            <label for="psw"><b>Lösenord</b></label>
-            <input type="password" placeholder="Skriv in lösenord" name="psw" required>
-              
-            <button class="loginbtn" type="submit">Logga in</button>
+
+    <!-- The LoginForm -->
+    <div id="id01" class="modal">
+
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+          <img src="/logo/uicon.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+          <p>
+            <label></label><span id="email-error"></span><br>
+            <input type="email" id="contact-email" onkeyup="validateEmail()" placeholder="Användarnamn" name="email">
+          </p>
+          <p>
+            <label></label><span id="psw-error"></span><br>
+            <input type="password" id="contact-psw" onkeyup="validatePsw()" placeholder="Lösenord" name="psw" required>
+          </p>
+          <p>
+            <span id="submit-error"></span><br><br>
+            <button id="loginbtn" onclick="return validateForm()">Bekräfta</button><br><br>
+          </p>
+          <p>
             <label>
               <input type="checkbox" checked="checked" name="remember"> Kom ihåg mig
             </label>
-          </div>
-        
-          <div class="container">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Avbryt</button>
-            <span class="psw">Glömt <a href="#">lösenord?</a></span>
-          </div>
-        </form>
+          </p>
+        </div>
+
+        <div class="container">
+          <p>
+            <button type="button" onclick="document.getElementById('id01').style.display='none'"
+              class="cancelbtn">Avbryt</button>
+          </p><br>
+          <p>Glömt <a href="#">lösenord?</a></p>
+        </div>
+      </form>
     </div>
 
-      <!-- Enlarged images of sauna -->
+    <!-- Enlarged images of sauna -->
 
-      <div class="popupimage">
-          <span>&times;</span>
-          <img id="pic5" src="/img/pic3.jpg" alt="">
-      </div>
+    <div class="popupimage">
+      <span>&times;</span>
+      <img id="pic5" src="/img/pic3.jpg" alt="">
+    </div>
 
-      <!-- The SaunaForm -->
-      <div class="container2">
-          <h1 class="brand">Boka Bastu</h1>
-          <div class="wrapper animated bounceInLeft">
-              <div class="company-info">
-                  <h3>Exklusiv för medlemmar</h3>
-                  <div>
-                    <img id="pic3" src="/img/pic3.jpg" alt="pic of sauna">
-                  </div>
-                  <div>
-                    <img id="pic4" src="/img/pic4.jpg" alt="pic of sauna">
-                  </div>
-              </div>
-              <div class="contact">
-                <a href="/index.html">&times;</a>
-                  <form action="">
-                      <p>
-                        <label for="birthdaytime">Datum / Tid</label>
-                        <input type="datetime-local" id="birthdaytime" name="birthdaytime">
-                      </p>
-                      <p>
-                        <label for="Lastname">Förnamn</label>
-                        <input type="text" placeholder="Fyll i ditt förnamn" name="comapany">
-                      </p>
-                      <p>
-                          <label for="Lastname">Efternamn</label>
-                          <input type="text" placeholder="Fyll i ditt efternamn" name="comapany">
-                      </p>
-                      <p>
-                        <label>Medlems id</label>
-                        <input type="text" placeholder="XXXX" name="id">
-                    </p>
-                      <p>
-                          <label>Email</label>
-                          <input type="text" placeholder="Fyll i din mailaddress" name="email">
-                      </p>
-                      <p>
-                          <label>Mobiltelefonnummer</label>
-                          <input type="text" placeholder="07XX XXX XXX" name="phone">
-                      </p>
-                      <p>
-                          <label>Antal Personer</label>
-                          <input type="number" placeholder="XX" name="amount">
-                      </p>
-                      <p class="full">
-                          <button>Bekräfta</button>
-                      </p>
-                  </form>
-              </div>
+    <!-- The SaunaForm -->
+    <div class="container2">
+      <h1 class="brand">Boka Bastu</h1>
+      <div class="wrapper animated bounceInLeft">
+        <div class="company-info">
+          <h3>Exklusiv för medlemmar</h3>
+          <div>
+            <img id="pic3" src="/img/pic3.jpg" alt="pic of sauna">
+          </div>
+          <div>
+            <img id="pic4" src="/img/pic4.jpg" alt="pic of sauna">
+          </div>
+        </div>
+        <div class="contact">
+          <a href="/index.html">&times;</a>
+          <form action="">
+            <p>
+              <label></label><span id="date-error"></span><br>
+              <input id="date" type="datetime-local" onkeyup="validateDate()" placeholder="Välj Dag / Tid">
+            </p>
+            <p>
+              <label></label><span id="name-error"></span><br>
+              <input type="text" id="contact-fname" onkeyup="validateFname()" placeholder="Förnamn" name="fname">
+            </p>
+            <p>
+              <label></label><span id="lname-error"></span><br>
+              <input type="text" id="contact-lname" onkeyup="validateLname()" placeholder="Efternamn" name="lname">
+            </p>
+            <p>
+              <label></label><span id="post-error"></span><br>
+              <input type="text" id="contact-post" onkeyup="validatePost()" placeholder="Användar id" name="postnr">
+            </p>
+            <p>
+              <label></label><span id="email-error"></span><br>
+              <input type="email" id="contact-email" onkeyup="validateEmail()" placeholder="Email" name="email">
+            </p>
+            <p>
+              <label></label><span id="phone-error"></span><br>
+              <input type="tel" id="contact-phone" onkeyup="validatePhone()" placeholder="Mobilnr 07xx xxx xxx">
+            </p>
+            <p>
+              <label></label><span id="amount-error"></span><br>
+              <input type="number" min=1 max=10 id="contact-amount" onkeyup="validateAmount()"
+                placeholder="Max 8 Personer" name="amount">
+            </p>
+            <p class="full">
+              <span id="submit-error"></span><br><br>
+              <button onclick="return validateForm()">Bekräfta</button>
+            </p>
+          </form>
+        </div>
       </div>
   </main>
-  
+
   <!-- Footer -->
   <div class="footer">
     <nav>
-          <ul class="nav_links">
-            <li><a href="/contact/contact.html">Kontakt</a></li>
-            <li><a href="/about/about.html">Om oss</a></li>
-            <li><a href="/calender/calender.html">Kalender</a></li>
-            <li><a href="/openhrs/openhrs.html">Öppettider</a></li>
-          </ul>
-      </nav>
+      <ul class="nav_links">
+        <li><a href="/contact/contact.html">Kontakt</a></li>
+        <li><a href="/about/about.html">Om oss</a></li>
+        <li><a href="/calender/calender.html">Kalender</a></li>
+        <li><a href="/openhrs/openhrs.html">Öppettider</a></li>
+      </ul>
+    </nav>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="/signin.js"></script>
+  <script src="sauna.js"></script>
+  <script src="/script.js"></script>
 
-
-<script src="/script.js"></script>
 </body>
+
 </html>
