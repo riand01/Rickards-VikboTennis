@@ -7,7 +7,7 @@ flatpickr("#date", {
     weekNumbers: true,
     dateFormat: "Y-m-d H:i",
     altInput: true,
-    altFormat: "d - m - Y  (H:i)",
+    altFormat: "d / m - Y  (H:i)",
     minDate: "today"
   });
 
