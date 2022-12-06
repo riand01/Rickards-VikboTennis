@@ -214,11 +214,13 @@ a {
 @media (max-width:768px) {
     .main {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-gap: 10px;
         column-gap: 10px;
-        align-items: center;
+        align-items: baseline;
+        justify-content: left;
     }
+
 }
 
 
@@ -255,3 +257,12 @@ a {
     gap: 60px;
 }
 
+@media(max-width:768px) {
+    .nav-menu2 {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 30px;
+    }
+
+}

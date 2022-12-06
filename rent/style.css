@@ -178,7 +178,7 @@ main {
 input[type=text],
 input[type=password],
 input[type=datetime-local],
-input[type=number], 
+input[type=number],
 input[type=email],
 input[type=tel] {
   width: 100%;
@@ -198,7 +198,7 @@ input[type=checkbox] {
 
 .container span {
   position: absolute;
-  
+
   font-size: 18px;
   color: rgb(255, 125, 125);
   float: right;
@@ -259,7 +259,7 @@ img.avatar {
   font-size: 9px;
 }
 
-.container a{
+.container a {
   padding-top: 16px;
   color: rgb(55, 192, 255);
 }
@@ -527,7 +527,7 @@ span.psw {
 
 .contact span {
   position: absolute;
-  
+
   font-size: 18px;
   color: rgb(255, 125, 125);
   float: right;
@@ -611,4 +611,14 @@ span.psw {
   justify-content: space-between;
   align-items: center;
   gap: 60px;
+}
+
+@media(max-width:768px) {
+  .nav-menu2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+  }
+
 }
