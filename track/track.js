@@ -24,12 +24,13 @@ var radioError = document.getElementById("radio-error");
 var amountError = document.getElementById("amount-error");
 var menError = document.getElementById("men-error");
 var femaleError = document.getElementById("female-error");
+var dateError = document.getElementById("date-error");
 
 function validateDate(){
     var date = document.getElementById('date').value;
 
     if(date.length == 0){
-        dateError.innerHTML = 'Namn är obligatoriskt';
+        dateError.innerHTML = 'Datum / Tid är obligatoriskt';
         return false;
     }else{
         dateError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';

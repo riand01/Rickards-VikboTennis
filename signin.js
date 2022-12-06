@@ -11,6 +11,7 @@ var postError = document.getElementById("post-error");
 var cityError = document.getElementById("city-error");
 var radioError = document.getElementById("radio-error");
 var pswError = document.getElementById("psw-error");
+var submit2Error = document.getElementById("submit-error2");
 
 
 function validateEmail(){
@@ -47,9 +48,11 @@ function validatePsw(){
 
 function validateForm(){
     if(!validateEmail() || !validatePsw()){
-        submitError.innerHTML = 'Fyll i alla nödvändiga fält';
+        submitError2.innerHTML = 'Fyll i alla nödvändiga fält';
         return false;
     }
+    submitError2.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    return true;
 }
 
 

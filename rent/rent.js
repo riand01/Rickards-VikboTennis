@@ -24,14 +24,15 @@ var radioError = document.getElementById("radio-error");
 var amountError = document.getElementById("amount-error");
 var menError = document.getElementById("men-error");
 var femaleError = document.getElementById("female-error");
+var dateError = document.getElementById("date-error");
 
-function validateDate() {
+function validateDate(){
     var date = document.getElementById('date').value;
 
-    if (date.length == 0) {
-        dateError.innerHTML = 'Namn är obligatoriskt';
+    if(date.length == 0){
+        dateError.innerHTML = 'Datum / Tid är obligatoriskt';
         return false;
-    } else {
+    }else{
         dateError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
         return true;
     }

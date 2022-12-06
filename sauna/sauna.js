@@ -30,7 +30,7 @@ function validateDate(){
     var date = document.getElementById('date').value;
 
     if(date.length == 0){
-        dateError.innerHTML = 'Namn är obligatoriskt';
+        dateError.innerHTML = 'Datum / Tid är obligatoriskt';
         return false;
     }else{
         dateError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
