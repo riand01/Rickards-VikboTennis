@@ -12,6 +12,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
@@ -29,8 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="/rent/rentmat.html">Hyr Material</a></li>
         <li class="nav-item"><a class="nav-link" href="/sauna/sauna.html">Boka Bastu</a></li>
         <li class="nav-item"><a class="ctasign" href="/signup/sign.html"><button>Bli medlem</button></a></li>
-        <li class="nav-item"><a class="ctalog" href="#"><button
-              onclick="document.getElementById('id01').style.display='block'">Logga in</button></a></li>
+        <li class="nav-item"><a class="ctalog" href="/index.html"><button onclick="document.getElementById('id01').style.display='block'">Logga in</button></a></li>
       </ul>
       <div class="hamburger">
         <span class="bar"></span>
@@ -43,44 +43,7 @@
   <main>
 
     <!-- The LoginForm -->
-    <div id="id01" class="modal">
-
-      <form class="modal-content animate" action="/action_page.php" method="post">
-        <div class="imgcontainer">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
-          <img src="/logo/uicon.png" alt="Avatar" class="avatar">
-        </div>
-
-        <div class="container">
-          <p>
-            <label></label><span id="email-error"></span><br>
-            <input type="email" id="contact-email" onkeyup="validateEmail()" placeholder="Användarnamn" name="email">
-          </p>
-          <p>
-            <label></label><span id="psw-error"></span><br>
-            <input type="password" id="contact-psw" onkeyup="validatePsw()" placeholder="Lösenord" name="psw" required>
-          </p>
-          <p>
-            <span id="submit-error2"></span><br><br>
-            <button id="loginbtn" onclick="return validateForm()">Bekräfta</button><br><br>
-          </p>
-          <p>
-            <label>
-              <input type="checkbox" checked="checked" name="remember"> Kom ihåg mig
-            </label>
-          </p>
-        </div>
-
-        <div class="container">
-          <p>
-            <button type="button" onclick="document.getElementById('id01').style.display='none'"
-              class="cancelbtn">Avbryt</button>
-          </p><br>
-          <p>Glömt <a href="#">lösenord?</a></p>
-        </div>
-      </form>
-    </div>
+    
 
     <!-- Enlarged images of sauna -->
 
@@ -165,7 +128,6 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="/signin.js"></script>
   <script src="rent.js"></script>
   <script src="/script.js"></script>
 </body>

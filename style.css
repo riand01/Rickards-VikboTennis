@@ -197,17 +197,22 @@ input[type=checkbox] {
   margin-left: 10px;
 }
 
+/* ----------------------------------------------------------------------------------------------span */
 .container span {
   position: absolute;
-
   font-size: 18px;
   color: rgb(255, 125, 125);
   float: right;
 }
 
-.container span i {
-  color: seagreen;
+.material-symbols-outlined {
+  position: absolute;
+  font-size: 18px;
+  color: seagreen !important;
+  float: right;
 }
+
+/* ----------------------------------------------------------------------------------------------span */
 
 /* Extra styles for the cancel button */
 .cancelbtn {

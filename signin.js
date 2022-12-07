@@ -1,4 +1,11 @@
+var modal = document.getElementById('id01');
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 var nameError = document.getElementById("name-error");
 var phoneError = document.getElementById("phone-error");
@@ -11,7 +18,7 @@ var postError = document.getElementById("post-error");
 var cityError = document.getElementById("city-error");
 var radioError = document.getElementById("radio-error");
 var pswError = document.getElementById("psw-error");
-var submit2Error = document.getElementById("submit-error2");
+var submitError2 = document.getElementById("submit-error2");
 
 
 function validateEmail(){
@@ -25,7 +32,7 @@ function validateEmail(){
         emailError.innerHTML = "Mailadressen är ogilltig"
         return false;
     }
-    emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    emailError.innerHTML = '<span class="material-symbols-outlined">check_circle</span>';
     return true;
 }
 
@@ -40,7 +47,7 @@ function validatePsw(){
         pswError.innerHTML = 'Lösenordet bör vara minst 6 karaktärer långt';
         return false;
     }
-    pswError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    pswError.innerHTML = '<span class="material-symbols-outlined">check_circle</span>';
     return true;
 }
 
@@ -51,7 +58,7 @@ function validateForm(){
         submitError2.innerHTML = 'Fyll i alla nödvändiga fält';
         return false;
     }
-    submitError2.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    submitError2.innerHTML = '<span class="material-symbols-outlined">check_circle</span>';
     return true;
 }
 

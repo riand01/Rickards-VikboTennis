@@ -23,7 +23,7 @@ function validateFname(){
         nameError.innerHTML = 'Ett namn, inga siffror';
         return false;
     }
-    nameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    nameError.innerHTML = '<span class="material-symbols-outlined">check_circle</span>';
     return true;
 }
 
@@ -38,7 +38,7 @@ function validateLname(){
         lnameError.innerHTML = 'Ett namn, inga siffror';
         return false;
     }
-    lnameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    lnameError.innerHTML = '<span class="material-symbols-outlined">check_circle</span>';
     return true;
 }
 
@@ -53,7 +53,7 @@ function validateEmail(){
         emailError.innerHTML = "Mailadressen är ogilltig"
         return false;
     }
-    emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    emailError.innerHTML = '<span class="material-symbols-outlined">check_circle</span>';
     return true;
 }
 
@@ -65,14 +65,14 @@ function validatePhone(){
         return false;
     }
     if(phone.length !== 10){
-        phoneError.innerHTML = 'Telefonnummer skall vara 10 siffror';
+        phoneError.innerHTML = '10 siffror';
         return false;
     }
     if(!phone.match(/^[0-9]{10}$/)){
         phoneError.innerHTML = 'Bara siffror';
         return false;
     }
-    phoneError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    phoneError.innerHTML = '<span class="material-symbols-outlined">check_circle</span>';
     return true;
 }
 
@@ -84,14 +84,14 @@ function validateSSnr(){
         return false;
     }
     if(ssnr.length !== 10){
-        ssnrError.innerHTML = 'Personnr skall vara 10 siffror';
+        ssnrError.innerHTML = '10 siffror';
         return false;
     }
     if(!ssnr.match(/^[0-9]{10}$/)){
         ssnrError.innerHTML = 'Bara siffror';
         return false;
     }
-    ssnrError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    ssnrError.innerHTML = '<span class="material-symbols-outlined">check_circle</span>';
     return true;
 }
 
@@ -106,7 +106,7 @@ function validateAdress(){
         adressError.innerHTML = 'En adress, inga siffror';
         return false;
     }
-    adressError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    adressError.innerHTML = '<span class="material-symbols-outlined">check_circle</span>';
     return true;
 }
 
@@ -118,14 +118,14 @@ function validatePost(){
         return false;
     }
     if(post.length !== 5){
-        postError.innerHTML = 'Postnr skall vara 5 siffror';
+        postError.innerHTML = '5 siffror';
         return false;
     }
     if(!post.match(/^[0-9]{5}$/)){
         postError.innerHTML = 'Bara siffror';
         return false;
     }
-    postError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    postError.innerHTML = '<span class="material-symbols-outlined">check_circle</span>';
     return true;
 }
 
@@ -140,7 +140,7 @@ function validateCity(){
         cityError.innerHTML = 'En stad, inga siffror';
         return false;
     }
-    cityError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    cityError.innerHTML = '<span class="material-symbols-outlined">check_circle</span>';
     return true;
 }
 
@@ -156,13 +156,13 @@ function validateRadio(){
     }
 
     if (valid){
-        radioError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+        radioError.innerHTML = '<span class="material-symbols-outlined">check_circle</span>';
     }
     else{
         radioError.innerHTML = 'Välj Man eller Kvinna';
         return false;
     }
-    cityError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    cityError.innerHTML = '<span class="material-symbols-outlined">check_circle</span>';
     return true;
 }
 
