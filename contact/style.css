@@ -217,8 +217,8 @@ a {
         grid-template-columns: 1fr;
         grid-gap: 10px;
         column-gap: 10px;
-        align-items: baseline;
-        justify-content: left;
+        align-items: none;
+        justify-content: none;
     }
 
 }
@@ -260,8 +260,8 @@ a {
 @media(max-width:768px) {
     .nav-menu2 {
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+        justify-content: left;
+        align-items: flex-start;
         gap: 30px;
     }
 

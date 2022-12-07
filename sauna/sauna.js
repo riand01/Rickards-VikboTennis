@@ -51,7 +51,9 @@ function validateFname(){
         nameError.innerHTML = 'Ett namn, inga siffror';
         return false;
     }
-    nameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    console.log("vadsomhelst")
+    // nameError.innerHTML = '<i class="XXXX"></i>';
+    nameError.innerHTML = 'entext';
     return true;
 }
 
@@ -66,7 +68,7 @@ function validateLname(){
         lnameError.innerHTML = 'Ett namn, inga siffror';
         return false;
     }
-    lnameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    lnameError.innerHTML = '<span class="material-symbols-outlined">check_circle</span>';
     return true;
 }
 

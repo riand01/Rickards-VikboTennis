@@ -183,7 +183,7 @@ input[type=email],
 input[type=tel] {
   width: 100%;
   padding: 12px 20px;
-  margin: 18px 0;
+  margin: 2px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -195,8 +195,8 @@ input[type=tel] {
 input[type=checkbox] {
   margin-left: 10px;
 }
-
-.container span {
+/* ---------------------------------------------------------------------------------------span1 */
+/* .container span {
   position: absolute;
 
   font-size: 18px;
@@ -206,7 +206,15 @@ input[type=checkbox] {
 
 .container span i {
   color: seagreen;
+} */
+/* ---------------------------------------------------------------------------------------span1 */
+.material-symbols-outlined {
+  color: green;
 }
+
+/* .material-symbols-outlined {
+  color: orange !important;
+} */
 
 /* Extra styles for the cancel button */
 .cancelbtn {
@@ -524,7 +532,7 @@ span.psw {
   outline: 0;
   transition: background-color 1s ease-out;
 }
-
+/* ----------------------------------------------------------------------------------------------span */
 .contact span {
   position: absolute;
 
@@ -537,6 +545,11 @@ span.psw {
   color: seagreen;
 }
 
+.material-symbols-outlined {
+  color: seagreen !important;
+}
+
+/* ----------------------------------------------------------------------------------------------span */
 /* #checkbox {
   display: block;
   width: unset;
