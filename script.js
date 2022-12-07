@@ -1,18 +1,20 @@
 
-// ------------------------------------------Get the modal-------------------------------------------------------
+
 
 //------------------------------------------PopupImage-----------------------------------------------------------
 
-// document.querySelectorAll('.company-info img').forEach(image =>{
-//     image.onclick = () =>{
-//         document.querySelector('.popupimage').style.display = 'block';
-//         document.querySelector('.popupimage img').src = image.getAttribute('src');
-//     }
-// });
+document.querySelectorAll('.company-info img').forEach(image =>{
+    image.onclick = () =>{
+        document.querySelector('.popupimage').style.display = 'block';
+        document.querySelector('.popupimage img').src = image.getAttribute('src');
+    }
+});
 
-// document.querySelector('.popupimage span').onclick = () =>{
-//     document.querySelector('.popupimage').style.display = 'none';
-// }
+document.querySelector('.popupimage span').onclick = () =>{
+    document.querySelector('.popupimage').style.display = 'none';
+}
+
+//------------------------------------------Hamburger-----------------------------------------------------------
 
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");

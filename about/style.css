@@ -142,6 +142,7 @@ a {
     width: 100%;
     text-align: center;
     transition: 0.3s;
+    z-index: 1;
   }
 
   .nav-item {
@@ -204,17 +205,7 @@ p {
   }
 
   .imgbox {
-    display: flex;
-    height: 202px;
-    width: 300px;
-    border: 1px solid lightgrey;
-  }
-
-  #pic3 {
-    display: block;
-    height: 202px;
-    width: 300px;
-    box-shadow: 0px 15px 30px rgb(0, 0, 0);
+    display: none;
   }
 
   .textbox {
